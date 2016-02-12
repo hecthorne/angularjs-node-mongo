@@ -1,11 +1,15 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+client/node_modules
 
-# Other files and folders
-.settings/
+client/dist
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+client/.tmp
+
+client/.sass-cache
+
+client/bower_components
+
+client/test/bower_components
+
+server/node_modules
+
+*.html
