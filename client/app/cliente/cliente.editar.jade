@@ -1,40 +1,41 @@
 .container
 	.row
-		a.btn.btn-sucess(ng-href="#/cliente") Voltar
+		a.btn.btn-success(ng-href="#/cliente") Voltar
 	.row
 		form(ng-submit="editar()")
 			div(class="form-group")
 				label(for="nome") Nome 
 					span(class="obrigatorio") *
-				input(ng-model="cliente.nome",class="form-control", id="nome", placeholder="Nome")
+				input(ng-model="cliente.nome",required,class="form-control", id="nome", placeholder="Nome")
 			div(class="form-group")
 				label(for="email") Email
 					span(class="obrigatorio") *
-				input(ng-model="cliente.email",class="form-control", id="email", placeholder="Email")
+				input(ng-model="cliente.email",required,class="form-control", id="email", placeholder="Email")
 			div(class="form-group")
 				label(for="telefone") Telefone
 					span(class="obrigatorio") *
-				input(ng-model="cliente.telefone",class="form-control", id="telefone", placeholder=" Telefone")
+				input(ng-model="cliente.telefone",required,class="form-control", id="telefone", placeholder=" Telefone")
 			div(class="form-group")
 				label(for="celular") Celular
 					span(class="obrigatorio") *
-				input(ng-model="cliente.celular",class="form-control", id="celular", placeholder="Celular")
+				input(ng-model="cliente.celular",required,class="form-control", id="celular", placeholder="Celular")
 			div(class="form-group")
 				label(for="nascimento") Nascimento
 					span(class="obrigatorio") *
-				input(ng-model="cliente.nascimento",class="form-control", id="nascimento", placeholder="Nascimento")
+				input(ng-model="cliente.nascimento",required,class="form-control", id="nascimento", placeholder="Nascimento")
 			div(class="form-group")
 				label(for="rg") CPF
 					span(class="obrigatorio") *
-				input(ng-model="cliente.cpf",class="form-control", id="cpf", placeholder="cpf")
+				input(ng-model="cliente.cpf",required,class="form-control", id="cpf", placeholder="cpf")
 			div(class="form-group")
 				label(for="rg") RG
 					span(class="obrigatorio") *
-				input(ng-model="cliente.rg",class="form-control", id="rg", placeholder="RG")
+				input(ng-model="cliente.rg",required,class="form-control", id="rg", placeholder="RG")
 			div(class="form-group")
 				label(for="rg") Perfil
 					span(class="obrigatorio") *
-				select(ng-options="o as o for o in perfils" ng-model="cliente.perfil")
+				select(ng-options="o as o for o in perfils", required, class="form-control", ng-model="cliente.perfil")
+					option(value="") Selecione...
 			div(ng-if="cliente.perfil != 'Usuário Normal'")
 				div(class="form-group")
 					label(for="usuario") Usuário

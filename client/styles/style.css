@@ -9,3 +9,7 @@ body {
 .obrigatorio{
 	color: red;
 }
+
+.login{
+	width: 35%;
+}

@@ -1,4 +1,4 @@
-.container
+.container.login
 	.row
 		p Entre com os dados de usuário
 	.row
@@ -6,9 +6,9 @@
 			div(class="form-group")
 				label(for="usuario") Usuário
 					span(class="obrigatorio") *
-				input(ng-model="usuario.usuario",class="form-control",placeholder="Usuário")
+				input(ng-model="usuario.usuario",required,class="form-control",placeholder="Usuário")
 			div(class="form-group")
 				label(for="senha") Senha
 					span(class="obrigatorio") *
-				input(ng-model="usuario.senha",class="form-control", placeholder="Senha")
+				input(ng-model="usuario.senha",required,class="form-control", placeholder="Senha")
 			button(type="submit", class="btn btn-default") Entrar
