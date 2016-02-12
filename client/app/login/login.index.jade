@@ -1,0 +1,14 @@
+.container
+	.row
+		p Entre com os dados de usuário
+	.row
+		form(ng-submit="logar()")
+			div(class="form-group")
+				label(for="usuario") Usuário
+					span(class="obrigatorio") *
+				input(ng-model="usuario.usuario",class="form-control",placeholder="Usuário")
+			div(class="form-group")
+				label(for="senha") Senha
+					span(class="obrigatorio") *
+				input(ng-model="usuario.senha",class="form-control", placeholder="Senha")
+			button(type="submit", class="btn btn-default") Entrar

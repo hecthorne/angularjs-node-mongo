@@ -1,0 +1,18 @@
+.container
+	.row
+		a.btn.btn-sucess(ng-href="#/cliente/cadastrar") Novo
+	.row
+		table(ng-table="registros",class="table")
+			tr(ng-repeat="row in $data")
+				td(data-title="'Nome'")
+					| {{row.nome}}
+				td(data-title="'Email'")
+					| {{row.email}}
+				td(data-title="'Celular'")
+					| {{row.celular}}
+				td(data-title="'Data Nascimento'")
+					| {{row.nascimento}}
+				td(data-title="'Ações'")
+					div(class="btn-group", role="group")
+						a(ng-href="#/cliente/editar/{{row._id}}",class="btn btn-default") Editar
+						button(ng-click="excluir(row._id)",class="btn btn-default") Excluir
